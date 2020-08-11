@@ -14,12 +14,7 @@
 </nav>
 
 <div class="container my-2">
-<!--    <a th:href="@{/yeniMusteriEkle}" class="btn btn-primary btn-sm mb-3"> Yeni Müsteri EKle </a>-->
-<!--    <strong>  <a th:href="@{/listele}" class="btn btn-primary btn-sm mb-3" style="background-color: darkorange"> Var olan Musterileri gormek icin tıklayınız. </a> </strong>-->
-<!--    <form action="#" th:action="@{/onay}"  >-->
-<!--        <input type="text" th:name="TC" >-->
-<!--        <input type="submit">-->
-<!--    </form>-->
+
     <h3>Müşteri Listesi</h3>
     <strong>
         <a th:href="@{/listele}" class="btn btn-successful btn-sm"> Müşterileri <b> görmek, yeni müşteri eklemek, düzenlemek  </b> veya <b>silmek</b> tıklayınız. </a>
@@ -63,26 +58,7 @@
     <strong>
         <a th:href="@{/kredi}" class="btn btn-primary btn-sm mb-3" style="background-color:red;"> Tablo aracılığıyla kredi testi yapmak için tıklayınız. </a>
     </strong>
-<!--    <table border="1" class = "table table-striped table-responsive-md">-->
-<!--        <thead>-->
-<!--        <tr>-->
-<!--            <th>Musteri AD</th>-->
-<!--            <th>Musteri SoyAD</th>-->
-<!--            <th>Musteri TC</th>-->
-<!--            <th>Actions</th>-->
-<!--        </tr>-->
-<!--        </thead>-->
-<!--        <tbody>-->
-<!--        <tr th:each="Musteri : ${MusteriListele}">-->
-<!--            <td th:text="${Musteri.ad}"></td>-->
-<!--            <td th:text="${Musteri.soyad}"></td>-->
-<!--            <td th:text="${Musteri.TC}"></td>-->
-<!--            <td> <a th:href="@{/yeniGuncellemeFormu/{id}(id=${Musteri.TC})}" class="btn btn-primary">Guncelle</a>-->
-<!--                <a th:href="@{/deleteMusteri/{id}(id=${Musteri.TC})}" class="btn btn-danger">Sil</a>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--        </tbody>-->
-<!--    </table>-->
+
 </div>
 
 </body>

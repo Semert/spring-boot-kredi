@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>MERT EFE</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+    <p style="color: aliceblue; margin: 0"> Mert EFE </p>
+</nav>
+
+<div class="container">
+    <h1>Yeni musteri</h1>
+    <hr>
+    <h2>Ekle </h2>
+
+    <form action="#" th:action="@{/saveMusteri}" th:object="${musteri}" method="POST">
+        <label>TC Kimlik No</label>
+        <input type="text" th:field="*{TC}" placeholder="TC numarasi" class="form-control mb-4 col-4">
+
+        <label>Ad</label>
+        <input type="text" th:field="*{ad}" placeholder="Ad" class="form-control mb-4 col-4">
+
+        <label>SoyAd</label>
+        <input type="text" th:field="*{soyad}" placeholder="SoyAd" class="form-control mb-4 col-4">
+
+        <label>Aylik Geliriniz</label>
+        <input type="text" th:field="*{aylikgelir}" placeholder="AylikGelir" class="form-control mb-4 col-4">
+
+        <label>Telefon No</label>
+        <input type="text" th:field="*{telno}" placeholder="TelNo" class="form-control mb-4 col-4">
+
+        <label>Kredi Skoru</label>
+        <input type="text" th:field="*{krediskor}" placeholder="KrediSkor" class="form-control mb-4 col-4">
+
+        <button type="submit" class="btn btn-info col-2">Guncelle</button>
+    </form>
+    <hr>
+    <a th:href="@{/listele}"> Listeye geri don.</a>
+</div>
+
+</body>
+</html>

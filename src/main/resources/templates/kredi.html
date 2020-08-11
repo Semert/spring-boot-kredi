@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Mert EFE Interview</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+    <p style="color: aliceblue; margin: 0"> Mert EFE </p>
+</nav>
+
+<div class="container">
+    <a th:href="@{/yeniMusteriEkle}" class="btn btn-primary btn-sm mb-3" style="margin-top: 15px;"> Yeni Musteri Ekle </a>
+    <h4>Musteri Listesi</h4>
+    <table border="1" class = "table table-striped table-responsive-md">
+        <thead>
+        <tr>
+            <th>Musteri AD</th>
+            <th>Musteri SoyAD</th>
+            <th>Musteri TC</th>
+            <th>Musteri TelNo</th>
+            <th>Musteri ay</th>
+            <th>Musteri ay</th>
+            <th>Kredi Skor Testi</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="Musteri : ${kredi}">
+            <td th:text="${Musteri.ad}"></td>
+            <td th:text="${Musteri.soyad}"></td>
+            <td th:text="${Musteri.TC}"></td>
+            <td th:text="${Musteri.telno}"></td>
+            <td th:text="${Musteri.krediskor}"></td>
+            <td th:text="${Musteri.aylikgelir}"></td>
+            <td> <a th:href="@{/kredial/{id}(id=${Musteri.TC})}" class="btn btn-primary" style="background-color: red">Kredi Testi </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <strong>  <a th:href="@{/listele}" class="btn btn-successful btn-sm mb-3"> Müşterileri <b> görmek, yeni müşteri eklemek, düzenlemek  </b> veya <b>silmek</b> tıklayınız. </a> </strong>
+    <strong>  <a th:href="@{/}" class="btn btn-primary btn-sm mb-3" style="background-color: darkorange "> Anasayfa'ya dönmek için tıklayınız. </a> </strong>
+</div>
+
+</body>
+</html>

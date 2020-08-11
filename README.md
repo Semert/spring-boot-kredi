@@ -1,4 +1,4 @@
-# spring-boot-kredi
+# Spring Boot Project
 In this project, we are able to do crud operations and determine whether the user good fit or not for the credit limit.
 
 I planned to use H2 embedded database for be able to get the database without any configuration to any user who would like download and test the project.
